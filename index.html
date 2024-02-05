@@ -2,131 +2,49 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equi="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Personal Portfolio</title>
+    <title>Temperature Convertor</title>
+    <!--css links-->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div id="header">
-<div class="container">
-    <nav>
-        <img src="images/logo.png" class="logo">
-        <ul>
-            
-            <li><a href="#header">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#mywork">My work</a></li>
-            <li><a href="#contact">Contact</a></li>
+ <div class="container">
+    <div class="Temperature-convertor">
 
-        </ul>    
-    </nav>
-    <div class="header-text">
-        <p> Student</p>
-        <h1>Hi, I'm<span> Shravani Shingote</span> </h1>
-    </div>
-</div>
-</div>  
-<!--------about-->
-<div id="about">
-    <div class="container">
-        <div class="row">
-            <div class="about-col-1">
-                <img src="images/about.jpg" >
-            </div>
-            <div class="about-col-2">
-                <h1 class="sub-title">About Me</h1>
+        <div class="mobile">
+                <p>9.30 AM</p>
+        </div>
 
-                <p> Myself Shravani shingote. I'm a student pursuing B.E. in Electronics and Telecommunication Engineering. 
-                    I've completed Diploma in Computer Engineering with 82%. I'm intrested in Web Development, UI/UX Designs and learning
-                    new trends in Computer Science. I'm curently working as an Intern in Web Development at Technohacks.</p>
+        <h2 class="title">Temperature Convertor</h2>
 
-                 <div class="tab-titles">
-                    <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
-                    <p class="tab-links" onclick="opentab('experince')">Experince</p>
-                    <p class="tab-links" onclick="opentab('education')">Education</p>
-                </div>
-                <div class="tab-contents active-tab" id="skills">
-                    <ul>
-                        <li><span>UI/UX</span><br>Designing Web interface</li>
-                        <li><span>Web Development</span><br>Designing Web app Development</li>
-                    </ul>
-                </div>
-                <div class="tab-contents" id="experince">
-                    <ul>
-                        <li><span>2023 - Current</span><br>TECHNOHACKS</li>
-                        
-                    </ul>
-                </div>
-                <div class="tab-contents" id="education">
-                    <ul>
-                        <li><span>Currently</span><br>B.E. [E&TC] from KJCOEMR, Pune.</li>
-                        <li><span>2019-22</span><br>Diploma in Computer Engineering from JSP, Pune.</li>
-                    </ul>
-                </div>
+        <div class="result">
+            <span class="result-heading">Result (Celsius)</span>
+            <h2 class="celsius-value" id="celsius"></h2>
+        </div>
+
+        <div class="degree-type">
+            <div class="degree-field">
+                <label for="degree">Degree</label>
+                <input type="number" name="degree" id="degree">
             </div>
         </div>   
+
+            <div class="temp-field">
+                <label for="temp-type">Type</label>
+                <select name="temperatures" id="temp-type" autocomplete="on">
+                    <option value="fahrenheit" id="fahrenheit">fahrenheit</option>
+                    <option value="kelvin" id="kelvin">kelvin</option>
+
+                </select>
+            </div>
+
     </div>
+
+        <button id="convert-btn">Convert</button>
+
 </div>
-<!-------------------------------------work-------------------------------------------->
-<div id="portfolio">
-    <div id="container">
-        <h1 class="sub-title">My Work</h1>
-        <div class="work-list">
-            <div class="work">
-                <img src="images/app.jpg">
-                <div class="layer">
-                <h3>Attendance using Face Recognition Application</h3>
-                <p>This application marks your attendance quickly with accurate timing.</p>
-                </div>
-            </div>
-            <div class="work">
-                <img src="images/electronicmail.1.jpg">
-                <div class="layer">
-                    <h3>Electronic Mail Box</h3>
-                    <p>This circuit model heps to detect mails in the letter box.</p>
-            </div>
-        </div>
         
-    </div>
-</div>
-<!------------------------------------contact------------------------------------------------------------------------>
-<div id="contact">
-    <div class="container">
-<div class="row">
-    <div class="contact-left">
-        <h1 class="sub-title">Contact Me</h1>
-        <p>contact@example.com</p>
-        <p>0123456789</p>
-        <a href="images/resume.pdf" download class="btn btn2">Download CV</a>
-    </div>
-    <div class="contact-right">
-        <form>
-            <input type="text" name="Name" placeholder="Your Name" required>
-            <input type="email" name="email" placeholder="Your Email" required>
-            <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
-            <button type="submit" class="btn btn2">Submit</button>
-        </form>
-    </div>
-</div>
-    </div>
-</div>        
-<script>
-
-var tablinks = document.getElementsByClassName("tab-links")
-var tabcontents = document.getElementsByClassName("tab-contents")
-
-function opentab(tabname){
-    for(tablink of tablinks){
-        tablink.classList.remove("active-link");
-    }
-    for(tabcontent of tabcontents){
-        tabcontent.classList.remove("active-tab");
-    }
-    event.currentTarget.classList.add("active-link");
-    document.getElementById(tabname).classList.add("active-tab");
-}
-
-</script>
+    <!--js tags-->
+    <script src="js/app.js"></script>
 </body>
 </html>
