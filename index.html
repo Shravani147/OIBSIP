@@ -1,50 +1,90 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Temperature Convertor</title>
-    <!--css links-->
-    <link rel="stylesheet" href="style.css">
-</head>
+<html>
+    <head>
+        <title>Landing page</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
 <body>
- <div class="container">
-    <div class="Temperature-convertor">
-
-        <div class="mobile">
-                <p>9.30 AM</p>
+<header>
+    <nav>
+        <div class="logo">
+          
+            <img src="20240204_200743_0000.png">
         </div>
-
-        <h2 class="title">Temperature Convertor</h2>
-
-        <div class="result">
-            <span class="result-heading">Result (Celsius)</span>
-            <h2 class="celsius-value" id="celsius"></h2>
+        <div class="menu">
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Info</a>
+            <a href="#">contact</a>
         </div>
+    </nav>
 
-        <div class="degree-type">
-            <div class="degree-field">
-                <label for="degree">Degree</label>
-                <input type="number" name="degree" id="degree">
-            </div>
-        </div>   
-
-            <div class="temp-field">
-                <label for="temp-type">Type</label>
-                <select name="temperatures" id="temp-type" autocomplete="on">
-                    <option value="fahrenheit" id="fahrenheit">fahrenheit</option>
-                    <option value="kelvin" id="kelvin">kelvin</option>
-
-                </select>
-            </div>
-
+    <div class="container">
+        <div class="left">
+        <h1>Welcome to our page</h1>
+        <p>We are here to create memorable handmade gifts and hampers with love.</p>
+        <button>Read more</button>
+        </div>
+        <div class="right">
+            <img src="20240204_194302.jpg">
+        </div>
+        
     </div>
 
-        <button id="convert-btn">Convert</button>
+<!---about-->
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <h1 class="sub-title">About Me</h1>
+                <p> HANDMADE STUDIO, a brand which makes every thing handmade with love. We make your faces smile with Amazing Gifts and Cards, Surprising Hampers and a lot more.</p>
 
+                 <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('Gifts')">Gifts</p>
+                    <p class="tab-links" onclick="opentab('Cards')">Cards</p>
+                    <p class="tab-links" onclick="opentab('Hampers')">Hampers</p>
+                    <p class="tab-links" onclick="opentab('Rakhis')">Rakhis</p>
+                    <p class="tab-links" onclick="opentab('Bracelets')">Bracelets</p>
+                </div>
+                <div class="tab-contents active-tab" id="Gifts">
+                    <ul>
+                        <li><span>Explosion box</span><br></li>
+                        <li><span>Pop-up box</span><br></li>
+                    </ul>
+                </div>
+
+                <div class="tab-contents" id="Cards">
+                    <ul>
+                        <li><span>Birthday Card</span><br></li>
+                        <li><span>Waterfall Card</span><br></li>
+                        <li><span>Pyramid Card</span><br></li>
+                        <li><span>Message Card</span><br></li>
+                        
+                        
+                    </ul>
+                </div>
+                <div class="tab-contents" id="Hampers">
+                    <ul>
+                        <li><span>Birthday Hamper</span><br></li>
+                        <li><span>Friends Hamper</span><br></li>
+                        <li><span>Love Hamper</span><br></li>  
+                    </ul>
+                </div>
+                <div class="tab-contents" id="Rakhis">
+                    <ul>
+                        <li><span>Photo Rakhi</span><br></li>
+                        <li><span>Photo Rakhi Bracelet</span><br></li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="Rakhis">
+
+                
+                </div>
+            </div>
+        </div>   
+    </div>
 </div>
-        
-    <!--js tags-->
-    <script src="js/app.js"></script>
-</body>
+    
+</header>
+</body> 
 </html>
